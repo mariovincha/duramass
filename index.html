@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Duramass — Limpieza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.svg">
+</head>
+
+<body>
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+        <img src="img/duramass_logo_vertical.png" alt="Duramass" height="50">
+    </div>
+    <nav>
+      <a class="active" href="#">Inicio</a>
+      <a href="#">Productos del mes</a>
+      <a href="#">Los más vendidos</a>
+      <a href="#">10% de descuento</a>
+      <a href="#" style="color:var(--yellow);border-color:var(--yellow)">🏷 Ofertas</a>
+    </nav>
+    <div class="header-actions">
+      <!-- <button class="btn-cart"><i class="ti ti-shopping-cart"></i> Carrito (0)</button> -->
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<!-- <section class="hero">
+  <div class="hero-bubbles">
+    <div class="bubble" style="width:120px;height:120px;top:-30px;left:10%"></div>
+    <div class="bubble" style="width:80px;height:80px;top:20%;left:5%"></div>
+    <div class="bubble" style="width:60px;height:60px;bottom:10%;left:15%"></div>
+    <div class="bubble" style="width:100px;height:100px;top:10%;right:5%"></div>
+    <div class="bubble" style="width:50px;height:50px;bottom:20%;right:10%"></div>
+  </div>
+  <div class="hero-content">
+    <div>
+      <span class="hero-badge">🌿 MARCA ECOLÓGICA PERUANA</span>
+      <h1>Duramáss:<br><span>Limpieza poderosa,</span><br>cuidado ecológico</h1>
+      <p>Productos de limpieza biodegradables, hipoalergénicos y dermatológicos. Cuida tu hogar y el planeta al mismo tiempo.</p>
+      <div class="hero-btns">
+        <button class="btn-primary">🛒 Compra ahora</button>
+        <button class="btn-secondary">Ver catálogo</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-product-card">
+        <span class="product-emoji">🧴</span>
+        <div class="pname">Detergente Máss+</div>
+        <div class="pprice">S/ 30</div>
+      </div>
+      <div class="hero-product-card" style="margin-top:20px">
+        <span class="product-emoji">🫧</span>
+        <div class="pname">Lava Vajillas</div>
+        <div class="pprice">S/ 30</div>
+      </div>
+      <div class="hero-product-card">
+        <span class="product-emoji">🧼</span>
+        <div class="pname">Jabón Líquido</div>
+        <div class="pprice">S/ 30</div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- HERO BANNER -->
+<section style="padding:16px;background:#e8e8e8;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:230px 230px;gap:10px;font-family:'Montserrat',sans-serif">
+
+  <!-- PANEL 1: Máss+ Saludable — ocupa columna 1, ambas filas -->
+  <div style="
+    grid-column:1;
+    grid-row:1/3;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    background-image: url('img/bn_01.png');
+    background-size:cover;
+    background-position:center right;
+    background-color:#0a4a8f;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:32px 28px;
+  ">
+    <!-- overlay oscuro para que el texto se lea -->
+    <div style="position:absolute;inset:0;background:linear-gradient(120deg, rgba(5,30,80,0.82) 55%, rgba(5,30,80,0.15) 100%);border-radius:16px"></div>
+    <!-- contenido sobre el overlay -->
+    <div style="position:relative;z-index:1">
+      <p style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.75);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Hoy es el día</p>
+      <h1 style="font-size:40px;font-weight:900;color:#fff;line-height:1.05;text-transform:uppercase;margin-bottom:14px">Limpieza<br>que cuida<br><span style="color:#4FC3F7">tu hogar</span></h1>
+      <p style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:24px;font-family:'Open Sans',sans-serif;font-weight:600">Ecológicos, efectivos<br>y biodegradables.</p>
+      <a href="#" style="background:#fff;color:#0a3a7f;padding:12px 26px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;text-decoration:none;display:inline-block;letter-spacing:1px">COMPRAR AHORA</a>
+    </div>
+    <div style="position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-end">
+      <div>
+        <p style="font-size:11px;color:rgba(255,255,255,0.55);margin-bottom:3px;font-family:'Open Sans',sans-serif">Detergente Máss+ Saludable · 4 Litros</p>
+        <p style="font-size:30px;font-weight:900;color:#FBC02D;margin:0">S/ 30</p>
+      </div>
+      <span style="background:#FBC02D;color:#4E342E;font-size:10px;font-weight:700;padding:5px 12px;border-radius:8px;letter-spacing:1px">ECO</span>
+    </div>
+  </div>
+
+  <!-- PANEL 2: Suavizante — columna 2, ambas filas -->
+  <div style="
+    grid-column:2;
+    grid-row:1/3;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    background-image: url('img/bn_02.png');
+    background-size:cover;
+    background-position:center;
+    background-color:#0a2560;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:32px 24px;
+  ">
+    <div style="position:absolute;inset:0;background:linear-gradient(160deg, rgba(5,20,90,0.80) 50%, rgba(5,20,90,0.10) 100%);border-radius:16px"></div>
+    <div style="position:relative;z-index:1">
+      <p style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Nuevo</p>
+      <h2 style="font-size:48px;font-weight:900;color:#fff;line-height:0.95;text-transform:uppercase;margin-bottom:12px">Suavi<br><span style="color:#4FC3F7">zante</span><br>para tu<br>ropa</h2>
+      <p style="font-size:13px;color:rgba(255,255,255,0.8);line-height:1.5;margin-bottom:20px;font-family:'Open Sans',sans-serif">Ropa más suave,<br>fresca y protegida.</p>
+      <a href="#" style="background:transparent;color:#fff;padding:10px 22px;border:2px solid rgba(255,255,255,0.7);border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;text-decoration:none;display:inline-block;letter-spacing:1px">COMPRAR AHORA</a>
+    </div>
+    <div style="position:relative;z-index:1">
+      <p style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:4px;font-family:'Open Sans',sans-serif">Suavizante · Fragancia encapsulada · 4 Litros</p>
+      <p style="font-size:28px;font-weight:900;color:#FBC02D;margin:0">S/ 22</p>
+    </div>
+  </div>
+
+  <!-- PANEL 3: Lava Vajillas — columna 3, fila 1 -->
+  <div style="
+    grid-column:3;
+    grid-row:1;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    background-image: url('img/bn_03.png');
+    background-size:cover;
+    background-position:center right;
+    background-color:#1a6b2a;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:22px 20px;
+  ">
+    <div style="position:absolute;inset:0;background:linear-gradient(120deg, rgba(10,60,20,0.85) 50%, rgba(10,60,20,0.20) 100%);border-radius:16px"></div>
+    <div style="position:relative;z-index:1">
+      <p style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px">Nuevo</p>
+      <h3 style="font-size:26px;font-weight:900;color:#fff;line-height:1.05;text-transform:uppercase;margin-bottom:8px">Lava<br><span style="color:#FBC02D">Vajillas</span></h3>
+      <p style="font-size:11px;color:rgba(255,255,255,0.8);line-height:1.4;margin-bottom:14px;font-family:'Open Sans',sans-serif">Acción concentrada.<br>Fórmula ecológica,<br>poder antibacterial.</p>
+      <a href="#" style="background:#fff;color:#1a6b2a;padding:8px 18px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;text-decoration:none;display:inline-block;letter-spacing:1px">COMPRAR AHORA</a>
+    </div>
+    <div style="position:relative;z-index:1">
+      <p style="font-size:20px;font-weight:900;color:#FBC02D;margin:0">S/ 30 <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.55)">/ 4 Litros</span></p>
+    </div>
+  </div>
+
+  <!-- PANEL 4: Tres en Uno — columna 3, fila 2 -->
+  <div style="
+    grid-column:3;
+    grid-row:2;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    background-image: url('img/bn_04.png');
+    background-size:cover;
+    background-position:center right;
+    background-color:#6b3fa0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:22px 20px;
+  ">
+    <div style="position:absolute;inset:0;background:linear-gradient(120deg, rgba(50,10,90,0.85) 50%, rgba(50,10,90,0.20) 100%);border-radius:16px"></div>
+    <div style="position:relative;z-index:1">
+      <p style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px">Fórmula mejorada</p>
+      <h3 style="font-size:26px;font-weight:900;color:#fff;line-height:1.05;text-transform:uppercase;margin-bottom:8px">Tres<br>en <span style="color:#E040FB">Uno</span></h3>
+      <p style="font-size:11px;color:rgba(255,255,255,0.8);line-height:1.4;margin-bottom:14px;font-family:'Open Sans',sans-serif">Limpieza, perfume<br>y protección antibacterial.</p>
+      <a href="#" style="background:#fff;color:#4a1080;padding:8px 18px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;text-decoration:none;display:inline-block;letter-spacing:1px">COMPRAR AHORA</a>
+    </div>
+    <div style="position:relative;z-index:1">
+      <p style="font-size:20px;font-weight:900;color:#FBC02D;margin:0">S/ 12 <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.55)">/ 4 Litros</span></p>
+    </div>
+  </div>
+
+</section>
+<!-- FIN HERO -->
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><i class="ti ti-leaf"></i> 100% Ecológico y biodegradable</div>
+    <div class="trust-item"><i class="ti ti-heart"></i> Hipoalergénico y dermatológico</div>
+    <div class="trust-item"><i class="ti ti-shield-check"></i> No contiene insumos tóxicos</div>
+    <div class="trust-item"><i class="ti ti-truck-delivery"></i> Entrega rápida</div>
+    <div class="trust-item"><i class="ti ti-phone"></i> WhatsApp: 958317484</div>
+  </div>
+</div>
+
+<!-- PRODUCTOS DEL MES -->
+<section class="products-section">
+  <div class="section-header">
+    <span class="section-label">⭐ Destacados</span>
+    <h2>Productos del mes</h2>
+    <p>Los más elegidos por nuestros clientes para un hogar limpio y ecológico</p>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <!-- <span class="badge-new">NUEVO</span> -->
+      <div class="product-img"><img src="img/prodelmes_detergente.png" alt="Detergente" height="180" width="283"></div>
+      <div class="product-info">
+        <h3>Detergente Máss+ Saludable</h3>
+        <p class="cat">Detergente · 4 litros</p>
+        <div class="price-row">
+          <div><span class="price">S/ 30</span></div>
+          <button class="btn-add">+ Agregar</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <span class="badge-sale">-20% OFF</span>
+      <div class="product-img"><img src="img/prodelmes_jabon.png" alt="Jabón Líquido" height="180" width="283"></div>
+      <div class="product-info">
+        <h3>3 Jabones Líquidos</h3>
+        <p class="cat">Antibacterial · 4 litros</p>
+        <div class="price-row">
+          <div><span class="price">S/ 72</span><span class="price-old">S/ 90</span></div>
+          <button class="btn-add">+ Agregar</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <span class="badge-new">NUEVA</span>
+      <div class="product-img"><img src="img/prodelmes_lejia.png" alt="Lejía" height="180" width="283"></div>
+      <div class="product-info">
+        <h3>Lejía ULTRA</h3>
+        <p class="cat">¡Desinfecta y blanquea! · 4 litros</p>
+        <div class="price-row">
+          <div><span class="price">S/ 10</span></div>
+          <button class="btn-add">+ Agregar</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"><img src="img/prodelmes_3en1.png" alt="3 en 1" height="180" width="283"></div>
+      <div class="product-info">
+        <h3>Tres en Uno</h3>
+        <p class="cat">Limpia,desifencta y aromatiza · 4 litros</p>
+        <div class="price-row">
+          <div><span class="price">S/ 12</span></div>
+          <button class="btn-add">+ Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="benefits-section">
+  <div class="section-header">
+    <span class="section-label">¿Por qué elegirnos?</span>
+    <h2>Limpieza con conciencia</h2>
+    <p>Formulados para proteger a tu familia y al planeta</p>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">🌿</div>
+      <h3>Ecológico</h3>
+      <p>Biodegradable al 100%. No daña el medio ambiente ni las fuentes de agua.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">👕</div>
+      <h3>Suave con la ropa</h3>
+      <p>Limpieza profunda sin dañar las fibras. Ideal para ropa blanca y de color.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">💚</div>
+      <h3>Seguro para la piel</h3>
+      <p>Hipoalergénico y dermatológico. Sin ingredientes que irriten tu piel.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🧼</div>
+      <h3>Limpieza profunda</h3>
+      <p>Elimina el 99.9% de bacterias, virus, hongos y gérmenes del hogar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO BANNER -->
+<section class="promo-section">
+  <div class="promo-inner">
+    <div class="promo-text">
+      <span class="tag">OFERTA ESPECIAL</span>
+      <h2>Hasta <em>30% OFF</em><br>en productos seleccionados<br>para empresas</h2>
+      <p>Por tiempo limitado. ¡No te lo pierdas!</p>
+      <button class="btn-promo" style="margin-top:20px">Ver todas las ofertas →</button>
+    </div>
+    <!-- <div class="promo-products">
+      <div class="promo-prod">
+        <div class="emo">🧹</div>
+        <div class="pn">Tres en Uno<br>4 Litros</div>
+        <div class="pp-old">S/ 20</div>
+        <div class="pp">S/ 12</div>
+      </div>
+      <div class="promo-prod">
+        <div class="emo">🧪</div>
+        <div class="pn">7 en 1<br>4 Litros</div>
+        <div class="pp-old">S/ 20</div>
+        <div class="pp">S/ 14</div>
+      </div>
+      <div class="promo-prod">
+        <div class="emo">🫙</div>
+        <div class="pn">Sal de Soda<br>250 grs</div>
+        <div class="pp-old">S/ 5</div>
+        <div class="pp">S/ 3</div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORÍAS -->
+<!-- <section class="categories-section">
+  <div class="section-header">
+    <span class="section-label">Nuestras líneas</span>
+    <h2>Categorías</h2>
+    <p>Encuentra el producto ideal para cada necesidad del hogar</p>
+  </div>
+  <div class="cats-grid wrap">
+    <div class="cat-card"><span class="ico">🧴</span><span>Detergentes</span></div>
+    <div class="cat-card"><span class="ico">💧</span><span>Suavizantes</span></div>
+    <div class="cat-card"><span class="ico">🫧</span><span>Lava Vajillas</span></div>
+    <div class="cat-card"><span class="ico">🧼</span><span>Jabón Líquido</span></div>
+    <div class="cat-card"><span class="ico">🧹</span><span>Multiusos</span></div>
+    <div class="cat-card"><span class="ico">🚿</span><span>Desinfectantes</span></div>
+    <div class="cat-card"><span class="ico">🪣</span><span>Lejía Ultra</span></div>
+    <div class="cat-card"><span class="ico">🚗</span><span>Auto Clean</span></div>
+  </div>
+</section> -->
+
+<!-- MÁS VENDIDOS -->
+<section class="popular-section">
+  <div class="section-header">
+    <span class="section-label">🔥 Top ventas</span>
+    <h2>Los más vendidos</h2>
+    <p>Lo que más eligen nuestros clientes cada semana</p>
+  </div>
+  <div class="popular-grid wrap">
+    <div class="product-card">
+      <div class="product-img"><img src="img/prodelmes_suavizante.png" alt="Suavizante" height="180" width="283"></div>
+      <div class="product-info">
+        <h3>Suavizante de prendas</h3>
+        <p class="cat">Frangancia encapsulada · 4 litros</p>
+        <div class="price-row"><span class="price">S/ 30</span><button class="btn-add">+ Agregar</button></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <span class="badge-new">9 AROMAS</span>
+      <div class="product-img"><img src="img/prodelmes_perfumina.png" alt="Perfumina" height="180" width="283"></div>
+      <div class="product-info">
+        <h3>Perfumina</h3>
+        <p class="cat">Ambientador Universal · 1 litro</p>
+        <div class="price-row"><span class="price">S/ 25</span><button class="btn-add">+ Agregar</button></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"><img src="img/prodelmes_lavavajilla.png" alt="Lava Vajillas" height="180" width="283"></div>
+      <div class="product-info">
+        <h3>Lava Vajillas</h3>
+        <p class="cat">Premium Gel Líquido · 4 litros</p>
+        <div class="price-row"><span class="price">S/ 30</span><button class="btn-add">+ Agregar</button></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"><img src="img/prodelmes_7en1.png" alt="7 en 1" height="180" width="283"></div>
+      <div class="product-info">
+        <h3>7 en 1</h3>
+        <p class="cat">7 funciones en 1 · 4 litros</p>
+        <div class="price-row"><span class="price">S/ 14</span><button class="btn-add">+ Agregar</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section class="about-section">
+  <div class="about-inner">
+    <div class="about-visual">
+      <img src="img/quienes_somos.png" alt="Duramáss - Limpieza impecable, saludable y ecológica">
+    </div>
+    <div class="about-content">
+      <span class="tag">Nuestra misión</span>
+      <h2>Quiénes somos</h2>
+      <p>Duramáss nace con una misión clara: ofrecer productos de limpieza de alta eficacia que cuiden tanto tu hogar como el planeta. Somos una empresa peruana comprometida con la ecología, la salud familiar y el bienestar social.</p>
+      <p>Todos nuestros productos son biodegradables, hipoalergénicos y formulados sin insumos tóxicos. Porque limpiar bien no tiene que significar dañar el medio ambiente.</p>
+      <div class="about-stats">
+        <div class="stat-box"><span class="stat-num">10+</span><span class="stat-lbl">Líneas de producto</span></div>
+        <div class="stat-box"><span class="stat-num">99.9%</span><span class="stat-lbl">Bacterias eliminadas</span></div>
+        <div class="stat-box"><span class="stat-num">100%</span><span class="stat-lbl">Biodegradable</span></div>
+        <div class="stat-box"><span class="stat-num">0</span><span class="stat-lbl">Insumos tóxicos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUSCRIPCIÓN -->
+<section class="subscribe-section">
+  <h2>Obtén 10% de descuento<br>en tu primera compra</h2>
+  <p>Suscríbete y recibe ofertas exclusivas, novedades y consejos de limpieza ecológica</p>
+  <div class="subscribe-form">
+    <input type="email" placeholder="Tu correo electrónico">
+    <button class="btn-sub">SUSCRIBIRME →</button>
+  </div>
+  <div class="subscribe-icons">
+    <span><i class="ti ti-shield-check"></i> Sin spam</span>
+    <span><i class="ti ti-gift"></i> Descuento inmediato</span>
+    <span><i class="ti ti-bell"></i> Ofertas exclusivas</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span ><img src="img/duramass_logo_vertical.png" alt="Duramass" width="128" height="36"></span>
+      <p>Ecología, cuidado a la vida y conciencia social. Productos de limpieza biodegradables para un hogar saludable y un planeta mejor.</p>
+      <div class="footer-social">
+        <div class="social-btn"><i class="ti ti-brand-facebook"></i></div>
+        <div class="social-btn"><i class="ti ti-brand-instagram"></i></div>
+        <div class="social-btn"><i class="ti ti-brand-whatsapp"></i></div>
+        <div class="social-btn"><i class="ti ti-brand-tiktok"></i></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Productos</h4>
+      <ul>
+        <li><a href="#">Detergentes</a></li>
+        <li><a href="#">Suavizantes</a></li>
+        <li><a href="#">Lava Vajillas</a></li>
+        <li><a href="#">Jabón Líquido</a></li>
+        <li><a href="#">Desinfectantes</a></li>
+        <li><a href="#">Lejía Ultra</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Atención al cliente</h4>
+      <ul>
+        <li><a href="#">Cómo comprar</a></li>
+        <li><a href="#">Seguimiento de pedido</a></li>
+        <li><a href="#">Devoluciones</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <div class="footer-contact"><i class="ti ti-brand-whatsapp"></i>958 317 484</div>
+      <div class="footer-contact"><i class="ti ti-clock"></i>Lun–Sáb, 8am–6pm</div>
+      <div class="footer-contact" style="margin-top:16px"><i class="ti ti-leaf"></i></div>
+      <div class="footer-badges" style="margin-top:8px">
+        <span class="badge-eco">ECO</span>
+        <span class="badge-eco">BIO</span>
+        <span class="badge-eco">DERM</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Duramáss. Todos los derechos reservados.</p>
+    <p style="color:#fff">Ecología · Cuidado a la vida · Conciencia social</p>
+  </div>
+</footer>
+</body>
+</html>

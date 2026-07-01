@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Outer dark border -->
+  <text
+    x="50"
+    y="82"
+    text-anchor="middle"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="95"
+    font-weight="900"
+    font-style="italic"
+    fill="#1a1a1a"
+    stroke="#1a1a1a"
+    stroke-width="12"
+    stroke-linejoin="round"
+  >D</text>
+
+  <!-- White border -->
+  <text
+    x="50"
+    y="82"
+    text-anchor="middle"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="95"
+    font-weight="900"
+    font-style="italic"
+    fill="#1a1a1a"
+    stroke="white"
+    stroke-width="7"
+    stroke-linejoin="round"
+  >D</text>
+
+  <!-- Main fill negro -->
+  <text
+    x="50"
+    y="82"
+    text-anchor="middle"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="95"
+    font-weight="900"
+    font-style="italic"
+    fill="#1a1a1a"
+  >D</text>
+</svg>
