@@ -130,7 +130,12 @@
     border-radius: 10px;
   }
 
-  /* Fondo oscuro detrás del menú */
+  /* Fondo oscuro detrás del menú.
+     OJO: z-index debe quedar POR DEBAJO de 100 (el z-index del <header>
+     en style.css). El header crea su propio stacking context, así que
+     el nav (aunque tenga z-index:200 dentro del header) queda "atrapado"
+     compitiendo como si valiera 100 desde afuera. Si el overlay vale más
+     de 100, tapa al header entero (y al nav con él). */
   .nav-overlay {
     display: block;
     position: fixed;
@@ -139,7 +144,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 190;
+    z-index: 95;
   }
   .nav-overlay.is-active {
     opacity: 1;
