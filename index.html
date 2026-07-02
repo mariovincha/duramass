@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
   <link rel="shortcut icon" href="img/favicon.svg">
 </head>
 
@@ -17,7 +18,7 @@
     <div class="logo">
         <img src="img/duramass_logo_vertical.png" alt="Duramass" height="50">
     </div>
-    <nav>
+    <nav id="mainNav">
       <a class="active" href="#">Inicio</a>
       <a href="#">Productos del mes</a>
       <a href="#">Los más vendidos</a>
@@ -25,10 +26,15 @@
       <a href="#" style="color:var(--yellow);border-color:var(--yellow)">🏷 Ofertas</a>
     </nav>
     <div class="header-actions">
-      <!-- <button class="btn-cart"><i class="ti ti-shopping-cart"></i> Carrito (0)</button> -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
 </header>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <!-- HERO -->
 <!-- <section class="hero">
@@ -95,7 +101,7 @@
       <p style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.75);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Hoy es el día</p>
       <h1 style="font-size:40px;font-weight:900;color:#fff;line-height:1.05;text-transform:uppercase;margin-bottom:14px">Limpieza<br>que cuida<br><span style="color:#4FC3F7">tu hogar</span></h1>
       <p style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:24px;font-family:'Open Sans',sans-serif;font-weight:600">Ecológicos, efectivos<br>y biodegradables.</p>
-      <a href="#" style="background:#fff;color:#0a3a7f;padding:12px 26px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;text-decoration:none;display:inline-block;letter-spacing:1px">COMPRAR AHORA</a>
+      <a href="https://api.whatsapp.com/send?phone=+51958317484&text=Comprar:%201%20Botella%20de%20Detergente%20L%C3%ADquido%20-%204Lts%20S/%2030%20soles" target="_blank" style="background:#fff;color:#0a3a7f;padding:12px 26px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;text-decoration:none;display:inline-block;letter-spacing:1px">COMPRAR AHORA</a>
     </div>
     <div style="position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-end">
       <div>
@@ -476,5 +482,40 @@
     <p style="color:#fff">Ecología · Cuidado a la vida · Conciencia social</p>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('hamburgerBtn');
+    var nav = document.getElementById('mainNav');
+    var overlay = document.getElementById('navOverlay');
+
+    function closeNav() {
+      nav.classList.remove('nav-open');
+      btn.classList.remove('is-active');
+      overlay.classList.remove('is-active');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    function toggleNav() {
+      var isOpen = nav.classList.toggle('nav-open');
+      btn.classList.toggle('is-active', isOpen);
+      overlay.classList.toggle('is-active', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    btn.addEventListener('click', toggleNav);
+    overlay.addEventListener('click', closeNav);
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeNav);
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1024) closeNav();
+    });
+  })();
+</script>
 </body>
 </html>

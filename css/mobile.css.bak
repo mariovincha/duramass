@@ -1,0 +1,291 @@
+/* ============================================
+   DURAMASS — MOBILE.CSS
+   Estilos responsive para tablets y móviles.
+   Este archivo se carga DESPUÉS de style.css:
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/mobile.css">
+
+   No modifica style.css, solo lo sobreescribe
+   en pantallas pequeñas.
+   ============================================ */
+
+/* ============================================
+   MENÚ HAMBURGUESA
+   Oculto en escritorio, visible desde 768px.
+   ============================================ */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 210;
+}
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green);
+  border-radius: 2px;
+  margin: 0 auto;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.hamburger-btn.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-overlay {
+  display: none;
+}
+
+/* ============================================
+   TABLET (≤ 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+
+  /* Banner hero: pasa de 3 columnas a 2 */
+  section[style*="grid-template-columns"] {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 220px 220px 220px !important;
+  }
+  section[style*="grid-template-columns"] > div:nth-child(1) {
+    grid-column: 1 / 3 !important;
+    grid-row: 1 !important;
+  }
+  section[style*="grid-template-columns"] > div:nth-child(2) {
+    grid-column: 1 / 3 !important;
+    grid-row: 2 !important;
+  }
+  section[style*="grid-template-columns"] > div:nth-child(3) {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+  }
+  section[style*="grid-template-columns"] > div:nth-child(4) {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+  }
+
+  .products-grid,
+  .popular-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   MÓVIL GRANDE (≤ 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+  section { padding: 40px 16px; }
+  .wrap { padding: 0 16px; }
+
+  /* ---------- HEADER ---------- */
+  .header-inner {
+    padding: 12px 16px;
+  }
+  .logo img { height: 38px !important; }
+
+  /* Muestra el botón hamburguesa */
+  .hamburger-btn { display: flex; }
+
+  /* Menú desplegable: oculto por defecto, se muestra con .nav-open */
+  nav#mainNav {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 90px 20px 20px;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    transition: right 0.3s ease;
+    z-index: 200;
+    overflow-y: auto;
+  }
+  nav#mainNav.nav-open {
+    right: 0;
+  }
+  nav#mainNav a {
+    width: 100%;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  /* Fondo oscuro detrás del menú */
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 190;
+  }
+  .nav-overlay.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ---------- HERO BANNER (inline styles) ---------- */
+  section[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: none !important;
+    padding: 12px !important;
+    gap: 12px !important;
+  }
+  section[style*="grid-template-columns"] > div {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    min-height: 280px !important;
+  }
+  section[style*="grid-template-columns"] h1 {
+    font-size: 30px !important;
+  }
+  section[style*="grid-template-columns"] h2 {
+    font-size: 32px !important;
+  }
+  section[style*="grid-template-columns"] h3 {
+    font-size: 24px !important;
+  }
+
+  /* ---------- HERO (versión clásica comentada, por si se activa) ---------- */
+  .hero { padding: 40px 16px; }
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 30px; }
+  .hero p { margin: 0 auto 24px; }
+  .hero-btns { justify-content: center; }
+  .hero-visual { justify-content: center; }
+
+  /* ---------- TRUST BAR ---------- */
+  .trust-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-left: 8px;
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-header h2 { font-size: 24px; }
+  .section-header p { padding: 0 10px; }
+
+  /* ---------- PRODUCT GRIDS ---------- */
+  .products-grid,
+  .popular-grid,
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .product-img { height: 130px; }
+  .product-info h3 { font-size: 13px; }
+
+  /* ---------- CATEGORÍAS ---------- */
+  .cats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  /* ---------- PROMO BANNER ---------- */
+  .promo-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .promo-text h2 { font-size: 28px; }
+  .promo-products {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn-promo { width: 100%; }
+
+  /* ---------- QUIÉNES SOMOS ---------- */
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .about-visual { min-height: 260px; order: -1; }
+  .about-content h2 { font-size: 24px; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+
+  /* ---------- SUSCRIPCIÓN ---------- */
+  .subscribe-section h2 { font-size: 22px; }
+  .subscribe-form { flex-direction: column; }
+  .subscribe-form input,
+  .btn-sub { width: 100%; min-width: 0; }
+  .subscribe-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: left;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   MÓVIL PEQUEÑO (≤ 480px)
+   ============================================ */
+@media (max-width: 480px) {
+
+  section { padding: 32px 14px; }
+
+  /* Banner hero: tipografías más compactas */
+  section[style*="grid-template-columns"] h1 {
+    font-size: 26px !important;
+  }
+  section[style*="grid-template-columns"] h2 {
+    font-size: 26px !important;
+  }
+  section[style*="grid-template-columns"] > div {
+    min-height: 240px !important;
+    padding: 22px 18px !important;
+  }
+
+  /* Grids a una sola columna */
+  .products-grid,
+  .popular-grid,
+  .benefits-grid,
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-img { height: 150px; }
+
+  .section-header h2 { font-size: 22px; }
+
+  .promo-text h2 { font-size: 24px; }
+
+  nav a { font-size: 10px; padding: 6px 10px; }
+}
