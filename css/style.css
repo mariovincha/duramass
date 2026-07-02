@@ -100,8 +100,35 @@ section{padding:60px 20px}
 .benefit-card p{font-size:13px;color:#666;line-height:1.6}
 
 /* PROMO BANNER */
-.promo-section{background:linear-gradient(135deg,#0288D1,#4FC3F7);padding:60px 20px}
-.promo-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.promo-section{background:linear-gradient(135deg,#0288D1,#4FC3F7);padding:60px 20px; padding: 60px 0; /* o el valor que ya tenías */}
+
+.promo-inner {
+  max-width: 1200px;      /* mismo max-width que usan tus otras secciones */
+  margin: 0 auto;         /* centra el bloque */
+  padding: 0 40px;        /* margen lateral, ajusta según tu diseño */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.promo-text {
+  flex: 1;
+  max-width: 550px;
+}
+
+.promo-image {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.promo-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .promo-text .tag{background:rgba(255,255,255,0.2);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:14px;letter-spacing:1px}
 .promo-text h2{font-family:'Montserrat',sans-serif;font-weight:700;font-size:40px;color:#fff;line-height:1.1;margin-bottom:10px}
 .promo-text h2 em{font-style:normal;color:var(--yellow)}

@@ -305,3 +305,14 @@
 
   nav a { font-size: 10px; padding: 6px 10px; }
 }
+
+/* Responsive: apila en móvil */
+@media (max-width: 768px) {
+  .promo-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .promo-image {
+    justify-content: center;
+  }
+}
