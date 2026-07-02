@@ -68,8 +68,27 @@ section{padding:60px 20px}
 .product-info .price-row{display:flex;align-items:center;justify-content:space-between}
 .product-info .price{font-family:'Montserrat',sans-serif;font-weight:700;font-size:18px;color:var(--green)}
 .product-info .price-old{font-size:12px;color:#aaa;text-decoration:line-through;margin-left:6px}
-.btn-add{background:var(--green);color:#fff;border:none;padding:8px 16px;border-radius:20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;cursor:pointer;transition:all 0.2s;letter-spacing:0.5px}
-.btn-add:hover{background:#1B5E20}
+/* .btn-add{background:var(--green);color:#fff;border:none;padding:8px 16px;border-radius:20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;cursor:pointer;transition:all 0.2s;letter-spacing:0.5px}
+.btn-add:hover{background:#1B5E20} */
+
+.btn-add {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+  text-decoration: none; /* 👈 esto elimina el subrayado */
+}
+.btn-add:hover {
+  background: #1B5E20;
+}
+
 
 /* BENEFITS */
 .benefits-section{background:var(--gray)}
